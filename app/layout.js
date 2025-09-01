@@ -1,5 +1,6 @@
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "../components/Header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,7 +21,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
   <body className={`${inter.variable} ${jetMono.variable} antialiased`}>
-        {children}
+        <Header />
+        <main className="max-w-6xl mx-auto px-4 py-6">{children}</main>
       </body>
     </html>
   );
